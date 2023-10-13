@@ -1,5 +1,32 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import { Args } from './parseargs';
+
+export interface File {
+    path: string
+    contents: string
+}
+
+export function convertFileListIntoFiles(args: Args, filelist: string[]): File[] {
+
+    const out: File[] = []
+
+    for (const file of filelist) {
+        out.push({
+            path: file,
+            contents: ""
+        })
+    }
+
+    if (args.findInFiles) {
+        for (const file of out) {
+            const data = fs.readFileSync(file.path)
+            file.contents = data.toString()
+        }
+    }
+
+    return out
+}
 
 export function getAllFiles(path: string): string[] {
     let files: string[] = []

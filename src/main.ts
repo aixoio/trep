@@ -1,5 +1,6 @@
-import { getAllFiles } from "./files";
+import { convertFileListIntoFiles, getAllFiles } from "./files";
 import { getArgs } from "./parseargs"
 
-let args = getArgs()
-let files = getAllFiles(__dirname)
+const args = getArgs()
+const files = getAllFiles(__dirname)
+const trueFiles = convertFileListIntoFiles(args, files)
