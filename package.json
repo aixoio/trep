@@ -1,0 +1,26 @@
+{
+  "name": "trep",
+  "version": "1.0.0",
+  "description": "My version of grep but in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.prod.mjs",
+    "dev": "rollup -c rollup.config.dev.mjs -p run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aixoio/trep.git"
+  },
+  "author": "aixoio",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/aixoio/trep/issues"
+  },
+  "homepage": "https://github.com/aixoio/trep#readme",
+  "devDependencies": {
+    "@rollup/plugin-run": "^3.0.2",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "rollup": "^4.0.2",
+    "rollup-plugin-esbuild": "^6.1.0"
+  }
+}
