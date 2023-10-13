@@ -1,2 +1,5 @@
+import { getAllFiles } from "./files";
+import { getArgs } from "./parseargs"
 
-console.log("Hello world!")
+let args = getArgs()
+let files = getAllFiles(__dirname)
